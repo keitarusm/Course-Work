@@ -5,23 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <style>
-      .highlight {
-        background-color: yellow;
-      }
-    </style>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <p>
-      <span class="highlight">Lorem</span> ipsum dolor sit amet consectetur
-      adipisicing elit. Laudantium, rerum.
-      <figure>
-        <img
-          src="/HTML-Part1/Basics/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg"
-          alt="A cup of coffee."
-        />
-        <figcaption>My coffee this morning.</figcaption>
-      </figure>
-    </p>
+    <div id="square">
+      <div id="container">
+        <table>
+          <thead>
+            <tr>
+              <td>Country</td>
+              <td>OrderID</td>
+              <td>Order Amount</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>USA</td>
+              <td>1000</td>
+              <td>$1,300</td>
+            </tr>
+            <tr>
+              <td>USA</td>
+              <td>1001</td>
+              <td>$700</td>
+            </tr>
+            <tr>
+              <td>CA</td>
+              <td>1002</td>
+              <td>$2,000</td>
+            </tr>
+            <tr>
+              <td>CA</td>
+              <td>1003</td>
+              <td>$1000</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Total</td>
+              <td>$5,000</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <!-- <div id="square"></div> -->
   </body>
 </html>
