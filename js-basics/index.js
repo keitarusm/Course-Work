@@ -1,16 +1,10 @@
-let a = 'red';
-let b = 'blue';
+let number1 = 5;
+let number2 = 7;
 
-console.log(a);
-console.log(b);
+let result = max(number1, number2);
 
-[a, b] = swap(a, b);
-console.log(a);
-console.log(b);
+console.log(result);
 
-function swap(a, b) {
-    let temp = a;
-    a = b;
-    b = temp;
-    return [a, b];
+function max(number1, number2) {
+    return number1 < number2 ? number2 : number1;
 }
