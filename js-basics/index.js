@@ -1,10 +1,5 @@
-let number1 = 5;
-let number2 = 7;
+console.log(isLandscape(1024,768));
 
-let result = max(number1, number2);
-
-console.log(result);
-
-function max(number1, number2) {
-    return number1 < number2 ? number2 : number1;
+function isLandscape(width, height) {
+    return width > height;
 }
