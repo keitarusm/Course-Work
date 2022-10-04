@@ -1,8 +1,16 @@
-// Ternary operator -- 
-// If a customer has more than 100 points, 
-// they are a 'gold' customer, otherwise,
-// they are a 'silver' customer.
+let a = 'red';
+let b = 'blue';
 
-let points = 110;
-let type = points > 100 ? 'gold' : 'silver';
-console.log(type);
+console.log(a);
+console.log(b);
+
+[a, b] = swap(a, b);
+console.log(a);
+console.log(b);
+
+function swap(a, b) {
+    let temp = a;
+    a = b;
+    b = temp;
+    return [a, b];
+}
