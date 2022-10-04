@@ -2,3 +2,7 @@
 *.mp4
 *.pdf
 *.zip
+HTML-Part3/Moshify/node_modules/
+HTML-Part3/Moshify/dist/
+HTML-Part3/Moshify/.cache/
+HTML-Part3/Moshify/.parcel-cache/
