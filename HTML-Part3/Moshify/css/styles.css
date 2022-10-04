@@ -211,7 +211,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -302,6 +302,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -609,7 +610,7 @@ a {
 /* Blocks */
 .block {
   --padding-vertical: 6rem;
-  padding: var(--padding-vertical) 2rem;
+  padding: var(--padding-vertical) 2rem 0;
   /* border: 2px solid red; */
 }
 
@@ -738,8 +739,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -755,6 +757,9 @@ a {
 }
 
 /* Plans Block */
+.block-plans {
+  padding-bottom: var(--padding-vertical);
+}
 .block-plans .grid {
   gap: 4rem;
 }
@@ -806,9 +811,18 @@ a {
   }
 }
 
+/* Testimonials Block */
+/* .block-testimonial {
+  padding-bottom: var(--padding-vertical);
+} */
+
 /* Footer */
 .footer {
   background: #232323;
+}
+
+.footer.block {
+  padding-top: 15rem;
 }
 
 .footer a {
@@ -882,4 +896,12 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Sign-up Callout */
+
+.callout-signup {
+  max-width: 90%;
+  margin: 0 auto;
+  transform: translateY(10rem);
 }
