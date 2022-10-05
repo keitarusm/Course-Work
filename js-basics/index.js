@@ -1,9 +1,19 @@
-showNumbers(10);
+// Falsy
+// undefined
+// null
+// ''
+// false
+// 0
+// NaN
 
-function showNumbers(number) {
-    if (typeof number !== 'number') return false;
+const array = [0, null, undefined, '', 2, 3, 1];
 
-    for (let i = 0; i <= number; i++) {
-        console.log(i, (i%2===0?'EVEN':'ODD'));
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+    let count = 0;
+    for (let item of array) { 
+        if (item) count++;
     }
+    return count;
 }
