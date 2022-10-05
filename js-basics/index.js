@@ -1,11 +1,31 @@
-console.log(sum(10));
+const marks = [80, 80, 50];
 
-function sum(limit) {
-    let sum = 0;
-    
-    for (let i = 1; i <= limit; i++)
-        if (i % 3 === 0 || i % 5 === 0) 
-            sum += i;
-    
-    return sum;
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+    let grade = 0;
+
+    for (let mark of marks)
+        grade += mark;
+    grade /= marks.length;
+
+    switch (Math.floor(grade/10)) {
+        case 10:
+            return 'A';
+            break;
+        case 9:
+            return 'A';
+            break;
+        case 8:
+            return 'B';
+            break;
+        case 7:
+            return 'C';
+            break;
+        case 6:
+            return 'D';
+            break;
+        default:
+            return 'F';
+    }
 }
