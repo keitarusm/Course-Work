@@ -1,16 +1,16 @@
-showPrimes(20);
+// street
+// city
+// zipCode
+// showAddress(address)
 
-function showPrimes(limit) {
-    if (limit < 1) return;
- 
-    for (var number = 2; number <= limit; number++)
-        if (isPrime(number))
-            console.log(number);
+let address = {
+    street: '5228 VT-14',
+    city: 'Sharon VT',
+    zipCode: '05065'
 }
 
-function isPrime(number) {
-    for (var factor = 2; factor < number; factor++)
-        if (number % factor === 0)
-            return false;
-    return true;
+showAddress(address);
+
+function showAddress(address) {
+    console.log(address['street'] + '\n' + address['city'] + ', ' + address['zipCode']);
 }
