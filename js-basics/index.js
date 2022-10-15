@@ -1,32 +1,14 @@
-// title
-// body 
-// author
-// views
-// comments
-//   (author, body)
-// isLive
+const movies = [
+    { title: 'a', year: 2018, rating: 4.5 },
+    { title: 'b', year: 2018, rating: 4.7 },
+    { title: 'c', year: 2018, rating: 3 },
+    { title: 'd', year: 2017, rating: 4.5 },
+];
 
-const blogPost = {
-    title: 'Article Title',
-    body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, non!',
-    author: 'Joe Bishop',
-    views: 214,
-    comments: [
-        { author: 'Sam', body: 'Cool beans.'},
-        { author: 'Paul', body: '10 out of 10'},
-    ],
-    isLive: true
-}
+const titles = movies
+    .filter(m => m.year === 2018 && m.rating >= 4)
+    .sort((a, b) => a.rating - b.rating)
+    .reverse()
+    .map(m => m.title);
 
-function BlogPost(title, body, author) {
-    this.title = title;
-    this.body = body;
-    this.author = author;
-    this.views = 0;
-    this.comments = [];
-    this.isLive = false;
-}
-
-let blogPost2 = new BlogPost('a', 'b', 'c');
-
-console.log(blogPost2);
+console.log(titles);
