@@ -1,14 +1,28 @@
-const movies = [
-    { title: 'a', year: 2018, rating: 4.5 },
-    { title: 'b', year: 2018, rating: 4.7 },
-    { title: 'c', year: 2018, rating: 3 },
-    { title: 'd', year: 2017, rating: 4.5 },
-];
+function StopWatch() {
+    let startTime = Date.now();
+    let elapsedTime = Date.now() - startTime;
+    let running = false;
 
-const titles = movies
-    .filter(m => m.year === 2018 && m.rating >= 4)
-    .sort((a, b) => a.rating - b.rating)
-    .reverse()
-    .map(m => m.title);
+    this.start = function(){
+        if (running)
+            throw new Error('Already running');
+        
+        startTime = Date.now();
+        running = true;
+    };
+    this.stop = function(){
+        if (!running)
+            throw new Error('Already stopped');
 
-console.log(titles);
+        elapsedTime = Date.now() - startTime;
+        running = false;
+    };
+    this.reset = function(){
+        running = false;
+    };
+    this.duration = function() {
+        console.log(elapsedTime/1000);
+    };
+}
+
+let sw = new StopWatch();
