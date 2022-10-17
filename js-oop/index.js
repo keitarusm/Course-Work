@@ -1,28 +1,32 @@
-function StopWatch() {
-    let startTime = Date.now();
-    let elapsedTime = Date.now() - startTime;
-    let running = false;
+const _items = new WeakMap();
+class Stack {
+    constructor(stack) {
+        _items.set(this, []);
+    }
 
-    this.start = function(){
-        if (running)
-            throw new Error('Already running');
+    push(item) {
+        _items.get(this).push(item);
+    }
+
+    pop() {
+        const items = _items.get(this)
+
+        if (items.length === 0)
+            throw new Error('Stack is empty');
         
-        startTime = Date.now();
-        running = true;
-    };
-    this.stop = function(){
-        if (!running)
-            throw new Error('Already stopped');
+        return items.pop();
+    }
 
-        elapsedTime = Date.now() - startTime;
-        running = false;
-    };
-    this.reset = function(){
-        running = false;
-    };
-    this.duration = function() {
-        console.log(elapsedTime/1000);
-    };
+    peek() {
+        const items = _items.get(this)
+
+        if (items.length === 0)
+            throw new Error('Stack is empty');
+
+        return items[items.length - 1];
+    }
+
+    get count() {
+        return _items.get(this).length;
+    }
 }
-
-let sw = new StopWatch();
